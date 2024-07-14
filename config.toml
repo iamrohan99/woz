@@ -1,0 +1,8 @@
+baseURL = "https://wizardofozfreecoins.vercel.app"
+languageCode = "en-us"
+title = "Wizard of Oz Free Coins"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
