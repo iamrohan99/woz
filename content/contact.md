@@ -1,12 +1,11 @@
 ---
-title: Contact Us
+title: "Contact Us"
 date: 2024-07-14
-description: Get in touch with the Wizard of Oz Free Coins team for support, feedback, or inquiries.
+draft: false
+slug: "contact"
 author: Prince
 type: "page"
 ---
-
-# Contact Us
 
 We value your feedback and are here to assist you with any questions or concerns you may have. Whether you need support, have a suggestion, or simply want to share your experience, feel free to get in touch with us.
 
