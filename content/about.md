@@ -1,7 +1,8 @@
 ---
-title: About Us
+title: "About Us"
 date: 2024-07-14
-description: Learn more about Wizard of Oz Free Coins and our mission to provide daily rewards and valuable tips for players.
+draft: false
+slug: "about"
 author: Prince
 type: "page"
 ---
