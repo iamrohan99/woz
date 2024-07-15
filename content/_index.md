@@ -12,9 +12,7 @@ Welcome to your ultimate source for daily **Wizard of Oz free coins**! On this p
 
 ## Quick Links to Collect Your Free Coins
 
-- [Click here to collect today's free coins](#)
-- [Yesterday's free coins](#)
-- [Bonus coins for special events](#)
+{{< include-md "static/rewards/wizard-of-oz.md" >}}
 
 ## Maximize Your Daily Free Coins
 
