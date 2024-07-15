@@ -22,7 +22,7 @@ For the purposes of this Disclaimer:
 *   **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Disclaimer) refers to Wizard of Oz Free Coins.
 *   **Service** refers to the Website.
 *   **You** means the individual accessing the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
-*   **Website** refers to Wizard of Oz Free Coins, accessible from [https://wizardofozfreecoins.vercel.app](https://wizardofozfreecoins.vercel.app)
+*   **Website** refers to Wizard of Oz Free Coins, accessible from [https://wizardofoz-freecoins.netlify.app](https://wizardofoz-freecoins.netlify.app)
 
 ## Disclaimer
 
@@ -78,4 +78,4 @@ If you have any questions about this Disclaimer, You can contact Us:
 
 *   By email: pmtechtricks@gmail.com
 
-*   By visiting this page on our website: [https://wizardofozfreecoins.vercel.app/contact/](https://wizardofozfreecoins.vercel.app/contact/)
+*   By visiting this page on our website: [https://wizardofoz-freecoins.netlify.app/contact/](https://wizardofoz-freecoins.netlify.app/contact/)
