@@ -19,4 +19,4 @@ We understand how important it is to have a steady supply of coins to enjoy the 
 
 Thank you for visiting **Wizard of Oz Free Coins**. We hope you find our resources helpful and enjoy a richer gaming experience with our daily updates and expert advice.
 
-For more information, visit us at [www.wizardofozfreecoins.com](https://www.wizardofozfreecoins.com).
+For more information, visit us at [https://wizardofoz-freecoins.netlify.app](https://wizardofoz-freecoins.netlify.app).
