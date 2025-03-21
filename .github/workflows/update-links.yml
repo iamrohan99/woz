@@ -14,35 +14,33 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Ensures all files are fetched
 
       - name: Verify package.json exists
-        run: ls -la ${{ github.workspace }}
-
-      - name: Create package.json if missing
         run: |
           if [ ! -f package.json ]; then
-            echo '{ "name": "woz", "version": "1.0.0", "dependencies": {} }' > package.json
+            echo "Error: package.json is missing!"
+            exit 1
           fi
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: ${{ github.workspace }}
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-      - name: Fetch and Update Links
-        run: |
-          node index-js/wizard-of-oz.js
-          echo "Content of links-json/wizard-of-oz.json:"
-          cat links-json/wizard-of-oz.json
+      - name: Install dependencies
+        run: npm ci  # This ensures a clean install based on package-lock.json
+
+      - name: Verify Installed Modules
+        run: npm list
+
+      - name: Run script to fetch and update links
+        run: node index-js/wizard-of-oz.js
 
       - name: Update Reward Page
         run: |
           echo '<div class="rewards">' > static/rewards/wizard-of-oz.md
           jq -r '.[] | "  <p><a href=\"" + .href + "\">" + .text + "</a></p>\n"' links-json/wizard-of-oz.json >> static/rewards/wizard-of-oz.md
           echo '</div>' >> static/rewards/wizard-of-oz.md
-          echo "Content of static/rewards/wizard-of-oz.md:"
-          cat static/rewards/wizard-of-oz.md
 
       - name: Configure Git
         run: |
@@ -55,7 +53,6 @@ jobs:
         run: |
           git add static/rewards/wizard-of-oz.md links-json/wizard-of-oz.json
           git commit -m "Update wizard-of-oz reward links" || true
-          
           git pull --rebase
           
           for i in {1..5}; do
