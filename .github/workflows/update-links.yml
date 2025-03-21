@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -24,6 +24,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
+        run: npm install
+
+      - name: Install required packages
         run: npm install jq axios cheerio
 
       - name: Fetch and Update Links
@@ -47,17 +50,17 @@ jobs:
 
       - name: Commit and Push changes
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add static/rewards/wizard-of-oz.md links-json/wizard-of-oz.json
           git commit -m "Update wizard-of-oz reward links" || true
-
-          # Pull with rebase to ensure the latest changes are included
+          
+          # Ensure latest changes are included
           git pull --rebase
-
-          # Push changes, retry if necessary
+          
+          # Push changes with retries
           for i in {1..5}; do
-            git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/iamrohan99/woz.git && break
+            git push && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
             sleep 5
             git pull --rebase
