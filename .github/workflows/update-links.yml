@@ -14,20 +14,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Cache node modules
-        uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          fetch-depth: 0 # Ensures all files are fetched
+
+      - name: Verify package.json exists
+        run: ls -la ${{ github.workspace }}
+
+      - name: Create package.json if missing
+        run: |
+          if [ ! -f package.json ]; then
+            echo '{ "name": "woz", "version": "1.0.0", "dependencies": {} }' > package.json
+          fi
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install required packages
-        run: npm install jq axios cheerio
+        working-directory: ${{ github.workspace }}
 
       - name: Fetch and Update Links
         run: |
@@ -55,10 +56,8 @@ jobs:
           git add static/rewards/wizard-of-oz.md links-json/wizard-of-oz.json
           git commit -m "Update wizard-of-oz reward links" || true
           
-          # Ensure latest changes are included
           git pull --rebase
           
-          # Push changes with retries
           for i in {1..5}; do
             git push && break
             echo "Retry $i: Push failed, retrying in 5 seconds..."
