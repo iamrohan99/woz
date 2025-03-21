@@ -1,4 +1,36 @@
 <div class="rewards">
+  <p><a href="https://zynga.social/194f3a">4x free credits 21.3.2025</a></p>
+
+  <p><a href="https://zynga.social/0998af">4x free credits 20.3.2025</a></p>
+
+  <p><a href="https://zynga.social/7c081c">4x free credits 19.3.2025</a></p>
+
+  <p><a href="https://zynga.social/faf3d7">4x free credits 17.3.2025</a></p>
+
+  <p><a href="https://zynga.social/c51edd">4x free credits 15.3.2025</a></p>
+
+  <p><a href="https://zynga.social/6ce0db">4x free credits 14.3.2025</a></p>
+
+  <p><a href="https://zynga.social/8a1869">4x free credits 13.3.2025</a></p>
+
+  <p><a href="https://zynga.social/c23ef1">.4x free credits 12.3.2025</a></p>
+
+  <p><a href="https://zynga.social/9cc379">.4x free credits 11.3.2025</a></p>
+
+  <p><a href="https://zynga.social/36e469">4x free credits 10.3.2025</a></p>
+
+  <p><a href="https://zynga.social/3ed8f5">4x free credits 9.3.2025</a></p>
+
+  <p><a href="https://zynga.social/a851ef">4x free credits 8.3.2025</a></p>
+
+  <p><a href="https://zynga.social/6c1d62">4x free credits 7.3.2025</a></p>
+
+  <p><a href="https://zynga.social/ceef0b">4x free credits 6.3.2025</a></p>
+
+  <p><a href="https://zynga.social/ff62e9">4x free credits 5.3.2025</a></p>
+
+  <p><a href="https://zynga.social/z8bv">4x free credits 4.3.2025</a></p>
+
   <p><a href="https://zynga.social/e6a5f7">4x free credits 3.3.2025</a></p>
 
   <p><a href="https://zynga.social/2f578a">4x free credits 2.3.2025</a></p>
